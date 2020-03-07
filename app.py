@@ -5,7 +5,6 @@ import os
 import numpy as np
 import requests
 import json
-import models
 
 app = Flask(__name__)
 
@@ -13,6 +12,7 @@ app.config.from_object(os.environ["APP_SETTINGS"])
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
+import models
 
 @app.route("/")
 def index():
